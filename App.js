@@ -3,8 +3,25 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Text, Image, TouchableOpacity,Alert,Button,TextInput} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator, Header} from 'react-navigation-stack';
-import Kaydol from './signProcess/Kaydol';
-import Giris from './signProcess/Giris';
+import Kayit from './signProcess/RegisterScreen';
+import Giris from './signProcess/LoginScreen';
+
+import * as firebase from "firebase";
+
+
+
+ let firebaseConfig = {
+    apiKey: "AIzaSyA0WxpvkiIJb8wXKi3bscvLQx69N-BvJTw",
+    authDomain: "kubi-c9456.firebaseapp.com",
+    databaseURL: "https://kubi-c9456.firebaseio.com",
+    projectId: "kubi-c9456",
+    storageBucket: "kubi-c9456.appspot.com",
+    messagingSenderId: "884546475947",
+    appId: "1:884546475947:web:b6f5ad9f6f2495b1a664ee",
+    measurementId: "G-1KMJH0R8SP"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
   class AnaEkran extends Component
 {
@@ -62,7 +79,7 @@ import Giris from './signProcess/Giris';
               <Text style={styles.info}>Üniversite Ders Notları</Text>
               <Text style={styles.description}>Üniversite öğrencilerinin, istedikleri notları bulup istedikleri zaman mobilden ders çalışabilecekleri platformdur.</Text>
               
-              <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props.navigation.navigate("Kaydol")}>
+              <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props.navigation.navigate("Kayit")}>
                 <Text style={{color:'#ffffff'}}>Kaydol</Text>  
               </TouchableOpacity>              
               <TouchableOpacity style={styles.buttonContainer}  onPress={() => this.props.navigation.navigate("Giris")}>
@@ -81,9 +98,8 @@ import Giris from './signProcess/Giris';
 const RootStack = createStackNavigator(
   {
     AnaEkran:{ screen: AnaEkran},
-    Kaydol:  { screen: Kaydol},
-    Giris:   { screen: Giris ,
-    },
+    Kayit:  { screen: Kayit},
+    Giris:   { screen: Giris },
   },
   {
     navigationOptions: {
