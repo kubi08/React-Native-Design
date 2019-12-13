@@ -80,6 +80,7 @@ export default class RegisterScreen extends React.Component {
             placeholderTextColor="#000000"
             underlineColorAndroid='transparent'
             autoCapitalize="none"
+            secureTextEntry
             onChangeText={password => this.setState({ password })}
             value={this.state.password}/>
       </View>

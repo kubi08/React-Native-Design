@@ -3,8 +3,13 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Text, Image, TouchableOpacity,Alert,Button,TextInput} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator, Header} from 'react-navigation-stack';
+import { createSwitchNavigator } from 'react-navigation'
 import Kayit from './signProcess/RegisterScreen';
 import Giris from './signProcess/LoginScreen';
+import Loading from './src/Loading'
+import SignUp from './src/SignUp'
+import Login from './src/Login'
+import Main from './src/Main'
 
 import * as firebase from "firebase";
 
@@ -91,6 +96,8 @@ import * as firebase from "firebase";
         {
           (this.state.isVisible === true) ? Splash_Screen : null
         }
+
+     
     </View>
         );
     }
@@ -100,6 +107,10 @@ const RootStack = createStackNavigator(
     AnaEkran:{ screen: AnaEkran},
     Kayit:  { screen: Kayit},
     Giris:   { screen: Giris },
+    Loading:{ screen: Loading},
+    SignUp:  { screen: SignUp},
+    Login:   { screen: Login },
+    Main:   { screen: Main },
   },
   {
     navigationOptions: {
@@ -109,10 +120,12 @@ const RootStack = createStackNavigator(
   },
 
   {
-      initialRouteName: 'AnaEkran',
+      initialRouteName: 'Loading',
   },
+  
  
   );
+  
 export default createAppContainer(RootStack);
 const styles = StyleSheet.create(
 {

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "884546475947",
+    "firebase_url": "https://kubi-c9456.firebaseio.com",
+    "project_id": "kubi-c9456",
+    "storage_bucket": "kubi-c9456.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884546475947:android:0ef4bf48f8672568a664ee",
+        "android_client_info": {
+          "package_name": "com.kubi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884546475947-er0s97d71goqnanvg72n139f0q0opq3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kubi",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "884546475947-0c509u985grgb9ste55u5fnbon2klt37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwKcHSb6g8ls5ROA81IWt_0i9gjR2xWNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884546475947-0c509u985grgb9ste55u5fnbon2klt37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
